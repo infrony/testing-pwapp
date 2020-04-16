@@ -149,7 +149,7 @@ function renderForecast(card, data) {
  * @return {Object} The weather forecast, if the request fails, return null.
  */
 function getForecastFromNetwork(coords) {
-  return fetch(`/testing-pwapp/forecast/${coords}`)
+  return fetch(`${window.location.origin}/forecast/${coords}`)
     .then(response => {
       return response.json();
     })
